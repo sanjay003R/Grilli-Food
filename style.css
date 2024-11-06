@@ -92,6 +92,28 @@
 .ch5 li
 {
 	cursor: pointer;
+	display: inline-block;
+    position: relative;
+}
+.ch5 li:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #f7ce8b;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.ch5 li:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.ch5 li a:hover
+{
+	color: #f7ce8b;
 }
 .ch5 a
 {
@@ -102,6 +124,45 @@
 {
 	display: flex;
 	justify-content: end;
+}
+details {
+	list-style: none;
+	position: relative;
+	display: none;
+
+}
+ details ul{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 180px;
+	width: 150px;
+	border-radius: 20px;
+	background:#f7ce8b;
+	right: 0;
+	color: black;
+	font-size: 16px;
+	font-weight: 900;
+}
+details ul li{
+	list-style: none;
+	text-align: center;
+	padding: 5px;
+	border-radius: 10px;
+	margin-right: 40px;
+}
+}
+details ul li:hover{
+	background-color: #d5eb17;
+}
+details ul li a{
+	margin-left: 10px;
+	color: black;
+	cursor: pointer;
+}
+summary{
+	list-style: none;
 }
 .ch6 details summary
 {
@@ -118,6 +179,8 @@
 	letter-spacing: 2px;
 	cursor: pointer;
 	border-radius: 4px;
+	box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.5s;
 }
 .ch6 button:hover
 {
@@ -125,6 +188,7 @@
 	color: white;
 	border: 1px solid;
 	border-color: #f7ce8b;
+	box-shadow: inset 0 -100px 0 0 transparent;
 }
 .ch6 i
 {
@@ -134,7 +198,6 @@
 .ch6 li a
 {
 	text-decoration: none;
-	color: white;
 }
 @media(max-width: 1200px)
 {
@@ -178,10 +241,12 @@
 	{
 		display: block;
 	}
-	.ch6 details summary
-    {
+details {
 	list-style: none;
-    }
+	position: relative;
+	display: block;
+
+}
 }
 .ch7
 {
@@ -203,13 +268,15 @@
 	background-color: transparent;
 	cursor: pointer;
 	border-radius: 4px;
+	box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.5s;
 }
 .ch7 button:hover
 {
-	background-color: #f7ce8b;
 	color: black;
 	border: 1px solid;
 	border-color: #f7ce8b;
+	box-shadow: inset 0 -100px 0 0 #f7ce8b;
 }
 .ch7 img 
 {
@@ -839,11 +906,13 @@
 	letter-spacing: 2px;
 	cursor: pointer;
 	border-radius: 4px;
+	box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.5s;
 }
 .ch20 button:hover
 {
-	background-color: #f7ce8b;
 	color: black;
+	box-shadow: inset 0 -100px 0 0 #f7ce8b;
 }
 .a3
 {
@@ -1072,7 +1141,10 @@
 	color: white;
 	border: none;
 }
-
+.b input::placeholder
+{
+	color: white;
+}
 .ch24 input
 {
 	height: 47px;
@@ -1090,13 +1162,15 @@
 	background-color: #f7ce8b;
 	cursor: pointer;
 	border: none;
+	box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.5s;
 }
 .ch24 button:hover
 {
-	background-color: black;
 	color: white;
 	border: 2px solid;
 	border-color: #f7ce8b;
+	box-shadow: inset 0 -100px 0 0 black;
 }
 .ch24 img
 {
